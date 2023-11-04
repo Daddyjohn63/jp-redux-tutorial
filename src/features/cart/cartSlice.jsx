@@ -19,6 +19,7 @@ const cartSlice = createSlice({
     },
     removeItem: (state, action) => {
       // console.log(action);
+      // console.table(action);
       const itemId = action.payload; //we can see the payload as a property in the console (i.e. the id), when we click on the remove button. we can therefore pass this into our filter function and filter the data that is in state.
       state.cartItems = state.cartItems.filter(item => item.id !== itemId);
     },
